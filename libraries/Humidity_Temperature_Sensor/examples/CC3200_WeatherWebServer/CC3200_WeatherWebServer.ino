@@ -133,9 +133,7 @@ int temperatureX10, ///< temperature in C x10
 WiFiServer server(80);
 
 
-///
-/// @brief	Setup
-///
+/* the setup() method runs once, when the sketch starts */
 void setup()
 {
     // 1. Serial
@@ -185,7 +183,7 @@ void setup()
     myDHT.begin();
 }
 
-
+/* the loop() method runs over and over again */
 void loop()
 {
     int i = 0;

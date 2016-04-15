@@ -41,10 +41,14 @@
 #include "Ultrasonic.h"
 
 Ultrasonic ultrasonic(7);
+
+/* the setup() method runs once, when the sketch starts */
 void setup()
 {
 	Serial.begin(9600);
 }
+
+/* the loop() method runs over and over again */
 void loop()
 {
 	long RangeInInches;

@@ -21,6 +21,7 @@
 /* Global Variables */
 int sound_value = 0;       /* variable to store the value coming from sound sensor */
 
+/* the setup() method runs once, when the sketch starts */
 void setup() 
 {
     /* Initialize LED pin */
@@ -28,6 +29,7 @@ void setup()
     digitalWrite(LED, LOW);
 }
  
+/* the loop() method runs over and over again */
 void loop() 
 {
     /* read the Sound Sensor value */

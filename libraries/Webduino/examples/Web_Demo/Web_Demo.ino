@@ -165,6 +165,7 @@ void defaultCmd(WebServer &server, WebServer::ConnectionType type, char *url_tai
   outputPins(server, type, false);  
 }
 
+/* the setup() method runs once, when the sketch starts */
 void setup()
 {
   // set pins 0-8 for digital input
@@ -180,6 +181,7 @@ void setup()
   webserver.addCommand("form", &formCmd);
 }
 
+/* the loop() method runs over and over again */
 void loop()
 {
   // process incoming connections one at a time forever

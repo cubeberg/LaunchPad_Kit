@@ -106,6 +106,7 @@ void rgbCmd(WebServer &server, WebServer::ConnectionType type, char *, bool)
   }
 }
 
+/* the setup() method runs once, when the sketch starts */
 void setup()
 {
   pinMode(RED_PIN, OUTPUT);
@@ -125,6 +126,7 @@ void setup()
   webserver.begin();
 }
 
+/* the loop() method runs over and over again */
 void loop()
 {
   // process incoming connections one at a time forever

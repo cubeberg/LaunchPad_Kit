@@ -249,7 +249,7 @@ void my_failCmd(WebServer &server, WebServer::ConnectionType type, char *url_tai
 
 
 
-
+/* the setup() method runs once, when the sketch starts */
 void setup()
 {
   /* initialize the Ethernet adapter */
@@ -275,6 +275,7 @@ void setup()
   webserver.begin();
 }
 
+/* the loop() method runs over and over again */
 void loop()
 {
   char buff[64];

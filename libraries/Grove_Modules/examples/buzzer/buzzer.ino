@@ -18,7 +18,7 @@
 /* Macro Define */
 #define BUZZER_PIN               39            /* sig pin of the Grove Buzzer */
 
-int length = 15;         /* the number of notes */
+int length = 15;         // the number of notes
 char notes[] = "ccggaagffeeddc "; //notes in the song
 int beats[] = { 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 4 }; //length of each note
 int tempo = 200;
@@ -30,6 +30,7 @@ void setup()
   pinMode(BUZZER_PIN, OUTPUT);       
 }
 
+/* the loop() method runs over and over again */
 void loop()
 {
   //Loop through each note

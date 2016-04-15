@@ -91,6 +91,7 @@ void buzzCmd(WebServer &server, WebServer::ConnectionType type, char *url_tail, 
   }
 }
 
+/* the setup() method runs once, when the sketch starts */
 void setup()
 {
   // set the PWM output for the buzzer to out
@@ -107,6 +108,7 @@ void setup()
   webserver.begin();
 }
 
+/* the loop() method runs over and over again */
 void loop()
 {
   // process incoming connections one at a time forever

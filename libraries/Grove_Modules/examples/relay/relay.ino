@@ -21,7 +21,7 @@ void setup() {
   pinMode(RELAY_PIN, OUTPUT); // initialize the digital pin as an output. 
 }
 
-// the loop routine runs over and over again forever:
+/* the loop() method runs over and over again */
 void loop() {
   digitalWrite(RELAY_PIN, HIGH); // turn the relay on (HIGH is the voltage level)
   delay(1000);   // wait for a second

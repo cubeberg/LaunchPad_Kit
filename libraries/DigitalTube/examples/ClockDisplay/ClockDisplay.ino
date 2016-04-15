@@ -45,12 +45,15 @@ unsigned char hour = 12;
 #define DIO 38
 TM1637 tm1637(CLK,DIO);
 
+/* the setup() method runs once, when the sketch starts */
 void setup()
 {
   tm1637.set();
   tm1637.init();
   TimerA0_initialize(500); // timing for 500ms
 }
+
+/* the loop() method runs over and over again */
 void loop()
 {
   if(Update == ON)

@@ -45,10 +45,14 @@
 
 SerialLCD slcd(4,5);
 Ultrasonic ultrasonic(7);
+
+/* the setup() method runs once, when the sketch starts */
 void setup()
 {
    slcd.begin();
 }
+
+/* the loop() method runs over and over again */
 void loop()
 {
 	long RangeInCentimeters;

@@ -94,6 +94,7 @@ void imageCmd(WebServer &server, WebServer::ConnectionType type, char *url_tail,
   }
 }
 
+/* the setup() method runs once, when the sketch starts */
 void setup()
 {
   // setup the Ehternet library to talk to the Wiznet board
@@ -110,6 +111,7 @@ void setup()
   webserver.begin();
 }
 
+/* the loop() method runs over and over again */
 void loop()
 {
   // process incoming connections one at a time forever

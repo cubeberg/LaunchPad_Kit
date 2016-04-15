@@ -57,6 +57,7 @@ FLASH_INFOB_SEGMENT volatile unsigned char flash_second[MAX_FLASH_ENTRIES];
 #define DIO 38
 TM1637 tm1637(CLK,DIO);
 
+/* the setup() method runs once, when the sketch starts */
 void setup()
 {
   Serial.begin(9600);
@@ -73,6 +74,8 @@ void setup()
   Serial.println("E - Erase the Flash");
   Serial.println("R - reset");
 }
+
+/* the loop() method runs over and over again */
 void loop()
 {
   char command;
