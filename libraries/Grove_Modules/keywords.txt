@@ -1,0 +1,44 @@
+#######################################
+# Syntax Coloring Map For Grove modules 
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Ultrasonic	KEYWORD1
+DHT	KEYWORD1
+TM1637	KEYWORD1
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+MeasureInCentimeters	KEYWORD2
+MeasureInInches	KEYWORD2
+Cmd_SetData	KEYWORD2
+Cmd_SetAddr	KEYWORD2
+Cmd_DispCtrl	KEYWORD2
+init	KEYWORD2
+writeByte	KEYWORD2
+start	KEYWORD2
+stop	KEYWORD2
+display	KEYWORD2
+clearDisplay	KEYWORD2
+set	KEYWORD2
+point	KEYWORD2
+begin	KEYWORD2
+readTemperature	KEYWORD2
+convertCtoF	KEYWORD2
+readHumidity	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+BRIGHT_DARKEST	LITERAL1
+BRIGHT_TYPICAL	LITERAL1
+BRIGHTEST	LITERAL1
+DHT22	LITERAL1	DHT
+DHT11	LITERAL1	DHT
+DHT21	LITERAL1	DHT
+AM2301	LITERAL1	DHT
+POINT_ON	LITERAL1
+POINT_OFF	LITERAL1
