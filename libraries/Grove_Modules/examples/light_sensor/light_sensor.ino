@@ -1,26 +1,23 @@
 /*
- Grove Light Sensor
-
+ Module: Grove Light Sensor
+ http://www.seeedstudio.com/depot/Grove-Light-Sensor-p-746.html
+ 
  A simple program that display the value of light from the Grove Light Sensor
  on the Grove 4-Digit Display, this example is very similar to the Grove Rotary Angle Sensor example
  
  The circuit:
- * 4-Digit Display attached to Pin 38 and 39 (J14 plug on Grove Base BoosterPack)
- * Light Sensor attached to Pin 24 (J6 plug on Grove Base BoosterPack)
- 
- * Note:   
+ * 4-Digit Display - attach to the J14 plug on the Grove Base BoosterPack (Pins 38 and 39) 
+ * Light Sensor - attach to the J6 plug on Grove Base BoosterPack (Pin 24)
  
  Created by Oliver Wang
- 
  This example code is in the public domain.
- 
- http://www.seeedstudio.com/depot/Grove-Light-Sensor-p-746.html
 */
 
-//4-Digit Display library
+//Include the 4-Digit Display library
 #include "TM1637.h" 
 
-/* Macro Define */
+// Let's use #define to rename our pins from numbers to readable variables
+// This is good practice when writing code so it is less confusing to read
 #define CLK               39                  /* 4-Digit Display clock pin */
 #define DIO               38                 /* 4-Digit Display data pin */
 #define LIGHT_SENSOR      24                 /* pin connected to the Light Sensor */
