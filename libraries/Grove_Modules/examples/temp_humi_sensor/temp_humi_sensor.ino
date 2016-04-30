@@ -1,37 +1,39 @@
 /*
- Grove Temperature & Humidity Sensor Pro
- 
+ Module: Grove Temperature & Humidity Sensor Pro
+ http://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-Pro-p-838.html 
+  
+ Description:
  Read value from Temperature & Humidity sensor then display on 
  the Grove 4-Digit Display.
  
  The circuit:
- * 4-Digit Display attached to Pin 38 and 39 (J14 plug on Grove Base BoosterPack)
- * Rotary Angle Sensor attached to Pin 24 (J6 plug on Grove Base BoosterPack)
- * sig pin of the Grove-Temperature-Humidity Sensor to the analog pin A1
+ * 4-Digit Display attached to the J14 plug on Grove Base BoosterPack (Pins 38 and 39)
+ * signal pin of the Grove-Temperature-Humidity Sensor to the J6 plug on Grove Base BoosterPack (Pin 24)
 
  
- * Note: Put your hands on Temperature & Humidity Sensor, both of the values 
-         will rise. 
+ Note: 
+ Put your hands on Temperature & Humidity Sensor, both of the values 
+ will rise. 
          
-         4-Digit Display:
-         |--------------------------|
-         | temperature :  humidity  |    
-         |--------------------------| 
+     4-Digit Display:
+     |--------------------------|
+     | temperature :  humidity  |    
+     |--------------------------| 
  
  This example code is in the public domain.
- 
- http://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-Pro-p-838.html 
- 
  */
  
+//4-Digit Display library
 #include "TM1637.h" 
+//Temperature and Humidity Sensor Library
 #include "DHT.h"
 
-/* Macro Define */
+// Let's use #define to rename our pins from numbers to readable variables
+// This is good practice when writing code so it is less confusing to read
 #define CLK               39          /* 4-Digit Display clock pin */
 #define DIO               38          /* 4-Digit Display data pin */
-#define BLINK_LED         RED_LED            /* blink LED */
-#define TEMP_HUMI_PIN     24                 /* pin of temperature&humidity sensor */
+#define BLINK_LED         RED_LED     /* blink LED */
+#define TEMP_HUMI_PIN     24          /* pin of temperature&humidity sensor */
 
 /* Global Variables */
 TM1637 tm1637(CLK, DIO);                  /* 4-Digit Display object */

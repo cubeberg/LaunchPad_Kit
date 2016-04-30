@@ -1,6 +1,8 @@
 /*
- Grove Rotary Angle Sensor
-
+ Module: Grove Rotary Angle Sensor
+ http://www.seeedstudio.com/depot/Grove-Rotary-Angle-Sensor-p-770.html
+ 
+ Description:
  Demonstrates analog input by reading an analog sensor on analog 
  pin, turning on and off a light emitting diode (RED_LED on LanuchPad) 
  and display the value on Grove 4 Digit Display. 
@@ -8,22 +10,23 @@
  the value obtained by analogRead(). 
  
  The circuit:
- * 4-Digit Display attached to Pin 38 and 39 (J14 plug on Grove Base BoosterPack)
- * Rotary Angle Sensor attached to Pin 24 (J6 plug on Grove Base BoosterPack)
+ * 4-Digit Display attached to the J14 plug on Grove Base BoosterPack (Pins 38 and 39)
+ * Rotary Angle Sensor attached to the J6 plug on Grove Base BoosterPack (Pin 24)
  
- * Note: Because of changes in voltage, the value of the rotary angle sensor 
-         varies slightly from run to run even you don't touch it.  
+ Note: 
+ Because of changes in voltage, the value of the rotary angle sensor 
+ varies slightly from run to run even you don't touch it.  
  
  Created by Oliver Wang
  
  This example code is in the public domain.
- 
- http://www.seeedstudio.com/depot/Grove-Rotary-Angle-Sensor-p-770.html
  */
- 
+
+//4-Digit Display library
 #include "TM1637.h" 
 
-/* Macro Define */
+// Let's use #define to rename our pins from numbers to readable variables
+// This is good practice when writing code so it is less confusing to read
 #define CLK               39          /* 4-Digit Display clock pin */
 #define DIO               38          /* 4-Digit Display data pin */
 #define LED               RED_LED     /* blink LED */
@@ -55,12 +58,13 @@ void loop()
     
     memset(bits, 0, 4);                             /* reset array before we use it */
     for(int i = 3; i >= 0; i--) 
-	{
+    {
         /* Convert the value to individual decimal digits for display */
         bits[i] = analog_value % 10;
         analog_value = analog_value / 10;  
         tm1637.display(i, bits[i]);                 /* display on 4-Digit Display */
     }
+    
     /*
       The amount of time the LED will be on and off depends on
       the value obtained by analogRead().

@@ -1,25 +1,24 @@
 /*
- Grove Moisture Sensor
-
+ Module: Grove Moisture Sensor
+ http://www.seeedstudio.com/depot/Grove-Moisture-Sensor-p-955.html
+ 
+ Description:
  The following sketch demonstrates a simple application of sensing 
  the moisture of the soil. You can determine whether a plant needs water 
  or not by observing the results that the sensor outputs.
  
  The circuit:
- * 4-Digit Display attached to Pin 38 and 39 (J14 plug on Grove Base BoosterPack)
- * Moisture Sensor attached to Pin 24 (J6 plug on Grove Base BoosterPack)
- 
- * Note:  
+ * 4-Digit Display attached to the J14 plug on Grove Base BoosterPack (Pins 38 and 39)
+ * Moisture Sensor attached to the J6 plug on Grove Base BoosterPack (Pin 24)
  
  This example code is in the public domain.
- 
- http://www.seeedstudio.com/depot/Grove-Moisture-Sensor-p-955.html
-
 */
+
 //4-Digit Display library
 #include "TM1637.h"
 
-/* Macro Define */
+// Let's use #define to rename our pins from numbers to readable variables
+// This is good practice when writing code so it is less confusing to read
 #define CLK               	39          /* 4-Digit Display clock pin */
 #define DIO               	38          /* 4-Digit Display data pin */
 #define MOISTURE_PIN      	24          /* pin of Moisture Sensor */
